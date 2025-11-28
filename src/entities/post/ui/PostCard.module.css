@@ -1,0 +1,11 @@
+.postCard {
+  padding: 15px;
+  border-radius: 4px;
+  background-color: #b1c2de;
+  color: #475d86;
+  margin: 10px;
+  width: 20%;
+}
+.postCardTitle{
+  margin-bottom: 55px;
+}

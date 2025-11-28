@@ -1,0 +1,7 @@
+.PostList{
+    background-color: #fff;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
