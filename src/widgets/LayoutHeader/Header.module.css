@@ -5,6 +5,9 @@
   display: flex;
   justify-content: center;
 }
+.title{
+  margin-right: 50%;
+}
 *{
   margin: 0;
   padding: 0;

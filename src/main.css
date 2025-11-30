@@ -1,0 +1,18 @@
+.button{
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    margin: 0px 20px;
+    background-color: #29364d;
+    color: #fff;
+}
+.light {
+  background-color: #fff;
+  color: #29364d;
+}
+
+.dark {
+  background-color: #29364d;
+  color: #fff;
+}
