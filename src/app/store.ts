@@ -1,13 +1,15 @@
-import { configureStore } from '@reduxjs/toolkit';
-import { postsApi } from '../entities/post/api.ts';
 
-export const store = configureStore({
-  reducer: {
-    [postsApi.reducerPath]: postsApi.reducer,
-  },
-  middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(postsApi.middleware),
-});
+import { postsApi } from '../shared/api/postsApi'
+import { configureStore } from '@reduxjs/toolkit'
 
-export type RootState = ReturnType<typeof store.getState>;
-export type AppDispatch = typeof store.dispatch;
+export const rootReducer = {
+  [postsApi.reducerPath]: postsApi.reducer,
+}
+
+export const setupStore = () => {
+  return configureStore({
+    reducer: rootReducer,
+    middleware: (getDefaultMiddleware: any) =>
+      getDefaultMiddleware().concat(postsApi.middleware),
+  })
+}
