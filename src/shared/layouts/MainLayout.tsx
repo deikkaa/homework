@@ -1,15 +1,18 @@
-import React from 'react';
+import React from 'react'
+import type { ReactNode } from 'react'
+import Header from './LayoutHeader/Header'
+import Footer from './LayoutFooter/Footer'
 
 interface MainLayoutProps {
-  children: React.ReactNode;
+  children: ReactNode
 }
 
-const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
+export default function MainLayout({ children }: MainLayoutProps) {
   return (
-    <div className="main-layout">
-      {children}
+    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+      <Header />
+      <main style={{ flex: 1 }}>{children}</main>
+      <Footer />
     </div>
-  );
-};
-
-export default MainLayout;
+  )
+}
